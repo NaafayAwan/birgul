@@ -70,6 +70,7 @@
     products,
     formatPrice,
     getProductById,
+    buildWhatsAppUrl,
     renderProductGrid,
     renderFeaturedProducts,
     createWhatsAppButton,
