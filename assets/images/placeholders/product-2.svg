@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" role="img" aria-label="Birgul product placeholder">
+  <rect width="1200" height="1600" fill="#f4f1ea"/>
+  <circle cx="600" cy="800" r="430" fill="#ddd4c5"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, serif" font-size="54" fill="#2b2824">Birgul Placeholder</text>
+</svg>
