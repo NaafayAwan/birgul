@@ -25,6 +25,28 @@
     return `<a class=\"btn btn-whatsapp\" href=\"${buildWhatsAppUrl(productName)}\" target=\"_blank\" rel=\"noopener noreferrer\">${label}</a>`;
   }
 
+  function renderWhatsAppButtons() {
+    document.querySelectorAll('[data-whatsapp-product]').forEach((node) => {
+      const product = node.getAttribute('data-whatsapp-product');
+      const label = node.getAttribute('data-whatsapp-label') || 'Order on WhatsApp';
+      const button = document.createElement('a');
+      button.className = 'btn btn-whatsapp';
+      button.href = buildWhatsAppUrl(product);
+      button.target = '_blank';
+      button.rel = 'noopener noreferrer';
+      button.textContent = label;
+      node.replaceChildren(button);
+    });
+  }
+
+  function renderInstagramLinks() {
+    document.querySelectorAll('[data-instagram-link]').forEach((link) => {
+      link.href = config.instagramUrl;
+      link.target = '_blank';
+      link.rel = 'noopener noreferrer';
+    });
+  }
+
   function productCardTemplate(product) {
     return `
       <article class="product-card fade-in">
@@ -71,6 +93,8 @@
     formatPrice,
     getProductById,
     buildWhatsAppUrl,
+    renderWhatsAppButtons,
+    renderInstagramLinks,
     renderProductGrid,
     renderFeaturedProducts,
     createWhatsAppButton,

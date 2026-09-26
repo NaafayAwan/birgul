@@ -56,9 +56,14 @@ a { color: inherit; text-decoration: none; }
   min-height: 4.6rem;
 }
 .brand {
-  font: 600 1.7rem/1 var(--serif);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.25rem;
+}
+.brand-logo {
+  width: auto;
+  height: clamp(1.5rem, 2.2vw, 2rem);
+  object-fit: contain;
 }
 .nav-toggle {
   display: none;
@@ -246,6 +251,19 @@ a { color: inherit; text-decoration: none; }
   color: var(--muted);
   font-size: 0.9rem;
 }
+.footer-meta {
+  display: grid;
+  gap: 0.45rem;
+}
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+}
+.footer-logo {
+  width: auto;
+  height: 1.4rem;
+  object-fit: contain;
+}
 .footer-links { display: flex; gap: 1rem; }
 
 .fade-in {
@@ -277,4 +295,6 @@ a { color: inherit; text-decoration: none; }
   }
   .main-nav ul { flex-direction: column; align-items: flex-start; gap: 0.9rem; }
   .site-header.nav-open .main-nav { display: block; }
+  .footer-meta,
+  .footer-links { width: 100%; }
 }

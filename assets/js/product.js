@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (!product) {
     container.innerHTML = '<p>Product not found. Please return to the collection page.</p>';
+    BirgulUI.renderInstagramLinks();
     BirgulUI.initMobileNav();
     BirgulUI.initFooterYear();
     return;
@@ -51,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  BirgulUI.renderInstagramLinks();
   BirgulUI.initMobileNav();
   BirgulUI.initFooterYear();
 });
